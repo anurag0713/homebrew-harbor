@@ -4,31 +4,40 @@ Official Homebrew tap for [Harbor](https://github.com/anurag0713/Harbor) — a l
 
 ## Installation
 
-You can install Harbor directly with:
-
 ```bash
-brew install --cask --no-quarantine anurag0713/harbor/harbor
+brew install anurag0713/harbor/harbor
 ```
 
-Or tap this repository first:
+Or tap this repository first and then install:
 
 ```bash
 brew tap anurag0713/harbor
-brew install --cask --no-quarantine harbor
+brew install harbor
 ```
 
-> **Note on macOS Gatekeeper:**
-> Harbor is an open-source project and is ad-hoc code signed rather than signed with an Apple Developer Program certificate. Passing `--no-quarantine` allows macOS to run the app immediately without Gatekeeper blocking it.
+### First-Time Opening (macOS Gatekeeper)
+
+Because Harbor is an independent open-source project and is not signed with a paid Apple Developer certificate, macOS Gatekeeper may show a warning on first launch.
+
+To allow Harbor to run:
+1. Go to **System Settings** → **Privacy & Security**.
+2. Scroll to the **Security** section where it says *"Harbor was blocked from use"*.
+3. Click **Open Anyway**.
+
+*Alternatively, you can run this once in Terminal:*
+```bash
+xattr -cr /Applications/Harbor.app
+```
 
 ## Updating
 
 ```bash
 brew update
-brew upgrade --cask harbor
+brew upgrade harbor
 ```
 
 ## Uninstalling
 
 ```bash
-brew uninstall --zap --cask harbor
+brew uninstall --zap harbor
 ```
