@@ -7,15 +7,9 @@ cask "harbor" do
   desc "Lightweight macOS Menu Bar companion for Xcode Device Hub"
   homepage "https://github.com/anurag0713/Harbor"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Harbor.app"
-
-  postflight do
-    system_command "xattr",
-                   args: ["-cr", "#{appdir}/Harbor.app"],
-                   sudo: false
-  end
 
   zap trash: [
     "~/Library/Preferences/com.anuragsingh.Harbor.plist",
