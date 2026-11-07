@@ -18,7 +18,7 @@ brew install --cask --no-quarantine harbor
 ```
 
 > **Note on macOS Gatekeeper:**
-> Harbor is an open-source project and is ad-hoc code signed rather than signed with an Apple Developer Program certificate ($99/yr). Passing `--no-quarantine` allows macOS to run the app immediately without Gatekeeper blocking it.
+> Harbor is an open-source project and is ad-hoc code signed rather than signed with an Apple Developer Program certificate. Passing `--no-quarantine` allows macOS to run the app immediately without Gatekeeper blocking it.
 
 ## Updating
 
